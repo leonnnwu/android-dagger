@@ -17,8 +17,13 @@
 package com.example.android.dagger.storage
 
 import android.content.Context
+import javax.inject.Inject
 
-class SharedPreferencesStorage(context: Context) : Storage {
+/**
+ * How can we tell Dagger how to provide Context? Context is provided by the Android system and therefore constructed outside of the graph. Since Context is already available at the time we'll be creating an instance of the graph, we can pass it in.
+    The way to pass it in is with a Component Factory and using the @BindsInstance annotation.
+ */
+class SharedPreferencesStorage @Inject constructor(context: Context) : Storage {
 
     private val sharedPreferences = context.getSharedPreferences("Dagger", Context.MODE_PRIVATE)
 
