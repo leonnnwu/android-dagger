@@ -18,6 +18,7 @@ interface AppComponent {
     // Expose RegistrationComponent factory from the graph
     fun registrationComponent(): RegistrationComponent.Factory
     fun loginComponent(): LoginComponent.Factory
+    fun settingsComponent(): SettingsComponent.Factory
 
     @Component.Factory
     interface Factory {
