@@ -18,7 +18,6 @@ package com.example.android.dagger.login
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.android.dagger.di.ActivityScope
 import com.example.android.dagger.user.UserManager
 import javax.inject.Inject
 
